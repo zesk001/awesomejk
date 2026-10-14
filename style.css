@@ -503,3 +503,27 @@ footer{background:#6b6b6b}
 .pstick.stuck .ps{margin-top:0;padding:0 0 14px}
 .pstick.stuck .ps input{height:40px}
 @media(max-width:900px){.pstick{top:64px}.pstick.stuck .ps{display:none}}
+
+/* ── 모바일: 제품 목록 2열, 고정 줄은 가로로 밀리는 두 줄만 ── */
+@media(max-width:900px){
+  .pg-head h1,main>.wrap>h1{font-size:30px;margin-top:16px}
+  .crumb{font-size:13px}
+  .pgrid{grid-template-columns:1fr 1fr}
+  .pd{padding:12px}
+  .pd b{font-size:15px;padding-top:10px}
+  .pd small{font-size:13px}
+  .pstick .ptab,.pstick .pcats{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+  .pstick .ptab::-webkit-scrollbar,.pstick .pcats::-webkit-scrollbar{display:none}
+  .pstick .ptab{gap:20px;margin-top:24px}
+  .pstick .ptab a{font-size:16px;flex:none}
+  .pstick .pcats{gap:20px;margin-top:16px;padding:12px 0}
+  .pstick .pcats button{flex:none}
+  .pstick.stuck .ptab{padding-top:10px}
+  .pstick.stuck .pcats{margin-top:8px;padding:8px 0 10px}
+}
+@media(max-width:900px){
+  .bar .wrap{height:64px}
+  .logo img{height:36px}
+  .tel{font-size:16px}
+  .pstick{top:64px}
+}
