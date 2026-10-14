@@ -492,3 +492,14 @@ footer{background:#6b6b6b}
 .hero::after{background:linear-gradient(90deg,rgba(31,36,25,.62),rgba(31,36,25,.18) 60%,rgba(31,36,25,0))}
 .card .c{background:linear-gradient(180deg,rgba(31,36,25,0) 35%,rgba(31,36,25,.62))}
 ::selection{background:#d9dcc4}
+
+/* 제품 페이지: 대분류 탭·품목·검색 줄을 머리말 아래에 고정 */
+.pstick{position:sticky;top:90px;z-index:40;background:#fff;margin:0 calc(-1 * var(--gut));padding:0 var(--gut);transition:box-shadow .2s}
+.pstick.stuck{box-shadow:0 1px 0 var(--line),0 8px 16px rgba(31,36,25,.06)}
+.pstick .ptab{margin-top:48px;transition:margin .2s}
+.pstick.stuck .ptab{margin-top:0;padding-top:14px}
+.pstick.stuck .pcats{margin-top:14px;padding:12px 0;border-bottom:0}
+.pstick .ps{padding-bottom:16px}
+.pstick.stuck .ps{margin-top:0;padding:0 0 14px}
+.pstick.stuck .ps input{height:40px}
+@media(max-width:900px){.pstick{top:64px}.pstick.stuck .ps{display:none}}
