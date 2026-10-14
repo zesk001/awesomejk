@@ -369,3 +369,10 @@ footer .wrap{display:flex;gap:24px;flex-wrap:wrap;justify-content:space-between}
   .hero{height:calc(100svh - 72px);min-height:0}
 }
 html.fp{scroll-snap-type:none!important;scroll-behavior:auto}
+/* 첫 페이지 공사 전·후: 6개 고정 (3×2) */
+.ba-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 16px;margin-top:40px}
+@media(min-width:901px) and (min-height:640px){
+  #ba .ba-grid{margin-top:32px}
+  #ba .ba-grid .ba{aspect-ratio:auto;height:clamp(160px,calc((100svh - 72px - 470px) / 2),380px)}
+}
+@media(max-width:900px){.ba-grid{grid-template-columns:1fr;margin-top:32px}}

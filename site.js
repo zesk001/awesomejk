@@ -71,7 +71,7 @@ function fullpage(){
 /* 들어올 때 떠오름 */
 function reveal(){
   if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var sel='section .eyebrow,section h2,section .sub,.pg-head h1,main h1,.cards>.card,.rail,.two>*,.flow,.cg,.malls,.faq,.csearch,.more-cases,.facts';
+  var sel='section .eyebrow,section h2,section .sub,.pg-head h1,main h1,.cards>.card,.rail,.ba-grid,.two>*,.flow,.cg,.malls,.faq,.csearch,.more-cases,.facts';
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll(sel).forEach(function(el){if(el.closest('.ov,.cm'))return;
     el.classList.add('rv');var sib=el.parentElement&&el.parentElement.classList.contains('cards')?[].indexOf.call(el.parentElement.children,el):0;
