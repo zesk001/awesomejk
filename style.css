@@ -376,3 +376,119 @@ html.fp{scroll-snap-type:none!important;scroll-behavior:auto}
   #ba .ba-grid .ba{aspect-ratio:auto;height:clamp(160px,calc((100svh - 72px - 470px) / 2),380px)}
 }
 @media(max-width:900px){.ba-grid{grid-template-columns:1fr;margin-top:32px}}
+
+/* ════════ 시안2 — 다음스케치식 정돈 (아래 규칙이 위를 덮어씀) ════════ */
+:root{
+  --ink:#111;--ink2:#333;--mut:#666;--mut2:#999;
+  --bg:#f7f7f7;--line:#e2e2e2;
+  --r:0px;
+  --film:.12;
+  --shadow:none;
+}
+body{color:var(--ink)}
+/* 머리말: 글자 메뉴만, 강조 없음 */
+.bar{border-bottom:1px solid var(--line)}
+.bar .wrap{height:90px}
+.nav{gap:48px;font-size:16px;font-weight:500;color:var(--ink)}
+.nav a:hover{color:var(--g)}
+.ddm{border-radius:0;box-shadow:0 6px 16px rgba(0,0,0,.06)}
+.tel{font-size:18px;color:var(--ink)}
+.tel small{color:var(--mut2)}
+.bar.sc{box-shadow:0 1px 0 var(--line)}
+/* 영문 라벨 없앰 — 제목만 */
+section .eyebrow,.pg-head .eyebrow,main .eyebrow{display:none}
+h1,h2{color:var(--ink);font-weight:700}
+.sub{color:var(--mut)}
+/* 구역: 흰 바탕 / 아주 옅은 회색만 교대 */
+section.tint{background:var(--bg)}
+/* 버튼: 흰 바탕 + 회색 선, 진한 색은 하나만 */
+.btn,.askbox a,.act a,.catbtn{border-radius:0;font-weight:500}
+.askbox a.o,.act a.o,.more,.more-cases a{background:#fff;color:var(--ink);border:1px solid #ccc}
+.more:hover,.more-cases a:hover{background:#fff;color:var(--g);border-color:var(--g)}
+.hbtn{border-radius:0}
+/* 사진·칸: 모서리 없음, 그림자 없음 */
+.film,.card,.ba,.cc .ph,.cm-in,.cm-x,.pd,.prod,.pdm .big,.flow,.askbox,.csearch input,.ps input,.csearch button,.rail-btn{border-radius:0!important}
+/* 공통 페이지 머리: 경로 + 큰 제목 + 밑줄 탭 */
+.pg-head{padding:56px 0 0}
+main{padding-top:56px}
+.crumb{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--mut)}
+.crumb .ico{font-size:18px}
+.crumb a{color:var(--mut)}
+.pg-head h1,main>.wrap>h1{font-size:50px;letter-spacing:-.03em;margin-top:28px}
+.ptab{display:flex;gap:28px;margin-top:48px;flex-wrap:wrap}
+.ptab a{font-size:18px;font-weight:600;color:var(--mut2);padding-bottom:8px;border-bottom:2px solid transparent}
+.ptab a.on{color:var(--ink);border-bottom-color:var(--ink)}
+.ptab a:hover{color:var(--ink)}
+/* 세부 품목: 알약 버튼 대신 글자 줄 */
+.pcats,.chips{gap:6px 28px;margin-top:36px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pcats button,.chips button{height:auto;padding:4px 0;border:0;border-radius:0;background:none;font-size:15px;color:var(--mut2)}
+.pcats button.on,.chips button.on{background:none;color:var(--g);font-weight:600}
+.pcats small{opacity:1;color:var(--mut2);font-weight:400}
+/* 제품 목록: 3열 격자선, 사진 크게, 이름 한 줄 */
+.pgrid{grid-template-columns:repeat(3,1fr);gap:0;margin-top:32px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.pd{border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 26px 26px}
+.pd:hover{border-color:var(--line);background:#fafafa}
+.pd .im{aspect-ratio:16/10;padding:0}
+.pd b{border:0;padding:20px 0 0;font-size:20px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pd small{padding:4px 0 0;font-size:16px;color:var(--mut)}
+/* 제품 상세: 라벨(회색 작은 글자) + 값(굵은 큰 글자) */
+.cm-in{max-width:1100px;padding:48px}
+.cm h3{font-size:28px}
+.pdm{grid-template-columns:1.2fr 1fr;gap:48px;margin-top:28px}
+.pdm .big{border:1px solid var(--line);padding:24px}
+.pdm dl{display:grid;grid-template-columns:1fr 1fr;gap:32px 24px}
+.pdm dl div{display:block;padding:0;border:0}
+.pdm dt{font-size:15px;font-weight:600;color:#5d5d5d}
+.pdm dd{margin-top:10px;font-size:20px;font-weight:600;color:var(--ink);word-break:break-all}
+.act{margin-top:40px}
+/* 시공 사례 칸 */
+.cgrid{gap:40px 24px}
+.cc b{font-size:18px;margin-top:14px}
+/* 꼬리말: 회색 띠 */
+.contact{background:#6b6b6b}
+.contact h2{color:#fff}
+footer{background:#6b6b6b}
+/* 첫 화면 칸 모서리 */
+.cards{gap:12px}
+
+.hero h1,.hero p{color:#fff}
+.hero .eyebrow{display:block}
+
+/* 첫 화면 사진 자동 넘김 */
+.hero .slides{position:absolute;inset:0}
+.hero .sl{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.hero .sl.on{opacity:1}
+.hero .sl img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 6.5s ease-out}
+.hero .sl.on img{transform:scale(1)}
+.hero .har{position:absolute;top:50%;transform:translateY(-50%);z-index:3;background:none;border:0;padding:10px;cursor:pointer}
+.hero .har svg{width:22px;height:44px}
+.hero .har.l{left:12px}.hero .har.r{right:12px}
+.hero .hdots{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);z-index:3;display:flex;gap:12px}
+.hero .hdots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer}
+.hero .hdots i.on{background:#fff}
+@media(prefers-reduced-motion:reduce){.hero .sl,.hero .sl img{transition:none}}
+
+/* ════════ 색 무드: 로고 녹색 → 차분한 카키·올리브 ════════ */
+:root{
+  --g:#4d5e3c;          /* 올리브 그린 — 버튼·선택 표시 */
+  --g-dk:#2f3a29;       /* 짙은 카키 — 문의 띠·꼬리말 */
+  --khaki:#8c8a63;      /* 카키 — 작은 포인트 */
+  --ink:#1f2419;--ink2:#3a4033;--mut:#6b6f60;--mut2:#9a9c8e;
+  --bg:#f4f4ef;         /* 옅은 세이지 바탕 */
+  --line:#e2e2d8;
+  --brand:#7d8a52;      /* 사진 색 막 */
+  --film:.16;
+  --scrim:rgba(31,36,25,.55);
+}
+.contact,footer{background:var(--g-dk)}
+.contact .cg small,.contact .foot{color:#c9ccb6}
+.tel{color:var(--ink)}
+.nav a:hover,.ddm a:hover,.ptab a:hover{color:var(--g)}
+.ptab a.on{color:var(--ink);border-bottom-color:var(--g)}
+.pcats button.on,.chips button.on{color:var(--g)}
+.hbtn.p{color:var(--g-dk)}
+.flow i,.cm-st figcaption i{color:var(--khaki)}
+.hero .hdots i.on{background:#e7e4c9}
+.hero::after{background:linear-gradient(90deg,rgba(31,36,25,.62),rgba(31,36,25,.18) 60%,rgba(31,36,25,0))}
+.card .c{background:linear-gradient(180deg,rgba(31,36,25,0) 35%,rgba(31,36,25,.62))}
+::selection{background:#d9dcc4}
