@@ -607,3 +607,74 @@ footer{background:#6b6b6b}
 .pstick .ptab{margin-top:0}
 @media(max-width:900px){.pstick{margin-top:24px}.pstick .ptab{margin-top:0}}
 html,body{overflow-anchor:none}
+
+/* 회사 소개 페이지 */
+#overview h2{line-height:1.35}
+.lead{margin-top:20px;font-size:var(--f-4);line-height:1.8;color:var(--ink2)}
+#overview .facts{margin-top:28px}
+.hist{margin-top:40px;border-top:1px solid var(--ink)}
+.hist .yr{display:grid;grid-template-columns:200px 1fr;padding:32px 0;border-bottom:1px solid var(--line)}
+.hist .yr>b{font-size:var(--f-1);font-weight:700;color:var(--g);line-height:1}
+.hist ul{list-style:none;margin:0;padding:0}
+.hist li{display:flex;gap:24px;padding:6px 0;font-size:var(--f-4)}
+.hist li i{flex:0 0 48px;font-style:normal;font-weight:700;color:var(--khaki)}
+.lic{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;border-top:1px solid var(--ink);border-left:1px solid var(--line)}
+.lic div{padding:28px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.lic small{display:block;font-size:var(--f-5);color:var(--mut)}
+.lic b{display:block;margin-top:8px;font-size:var(--f-3);font-weight:700;line-height:1.45}
+.lic span{display:block;margin-top:12px;font-size:var(--f-5);color:var(--khaki)}
+.mapbox{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-top:32px}
+.mapbox .facts{flex:1 1 520px;margin:0}
+.mapbtn{display:flex;gap:8px}
+.hbtn.o2{display:inline-flex;align-items:center;height:48px;padding:0 24px;border:1px solid var(--ink);color:var(--ink);font-weight:600;background:#fff}
+.hbtn.o2:hover{background:var(--g-dk);border-color:var(--g-dk);color:#fff}
+@media(max-width:900px){
+  .hist .yr{grid-template-columns:1fr;gap:14px;padding:24px 0}
+  .hist li{gap:14px;font-size:15px}
+  .lic{grid-template-columns:1fr 1fr}
+  .lic div{padding:18px 14px}
+  .lic b{font-size:16px}
+  .mapbtn{width:100%}.mapbtn a{flex:1;justify-content:center}
+}
+
+/* 첫 화면 얇은 문의 띠 */
+.cta2{position:relative;overflow:hidden;background:#1d241a;color:#fff;padding:0}
+.cta2 .wrap{position:relative;display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;min-height:260px;padding-top:48px;padding-bottom:48px}
+.cta2 h2{color:#fff;margin:0;font-size:var(--f-1)}
+.cta2-btn{display:flex;gap:10px}
+.cta2-btn a{display:inline-flex;align-items:center;height:56px;padding:0 28px;font-weight:600;font-size:var(--f-4);border:1px solid #fff;color:#fff}
+.cta2-btn a.b1{background:#fff;color:var(--g-dk)}
+.cta2-btn a:hover{background:rgba(255,255,255,.12);color:#fff}
+.cta2-btn a.b1:hover{background:#e9eadf;color:var(--g-dk)}
+/* 회사 소개: 진행 방식 */
+.pflow{display:grid;grid-template-columns:repeat(5,1fr);margin-top:40px;border-top:1px solid var(--ink)}
+.pflow div{padding:28px 24px 36px;border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pflow div:first-child{border-left:0;padding-left:0}
+.pflow i{font-style:normal;font-weight:700;font-size:var(--f-5);color:var(--khaki)}
+.pflow b{display:block;margin-top:8px;font-size:var(--f-2);font-weight:700}
+.pflow span{display:block;margin-top:8px;font-size:var(--f-5);color:var(--mut)}
+/* 고객 안내: 견적 문의 */
+.askg{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;margin-top:40px;border-top:1px solid var(--ink);padding-top:32px}
+.ask-l{font-size:var(--f-4);color:var(--ink2)}
+.ask-list{list-style:none;margin:20px 0 0;padding:0;counter-reset:a}
+.ask-list li{display:grid;grid-template-columns:40px 160px 1fr;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line);counter-increment:a}
+.ask-list li::before{content:counter(a,decimal-leading-zero);font-weight:700;font-size:var(--f-5);color:var(--khaki)}
+.ask-list b{font-weight:700}
+.ask-list span{color:var(--mut);font-size:var(--f-5)}
+.ask-r{background:var(--bg);padding:32px;display:flex;flex-direction:column;align-items:flex-start}
+.ask-r small{font-size:var(--f-5);color:var(--mut)}
+.ask-r a.n{font-size:clamp(30px,2.8vw,42px);font-weight:700;color:var(--ink);margin:2px 0 18px;line-height:1.2}
+.ask-r a.m{font-size:var(--f-4);color:var(--ink);margin:2px 0 24px;word-break:break-all}
+@media(max-width:900px){
+  .cta2 .wrap{min-height:0;padding-top:40px;padding-bottom:40px}
+  .cta2-btn{width:100%}.cta2-btn a{flex:1;justify-content:center;padding:0 12px;height:52px;font-size:15px}
+  .pflow{grid-template-columns:1fr}
+  .pflow div{display:grid;grid-template-columns:36px 1fr;column-gap:8px;padding:16px 0;border-left:0}
+  .pflow i{grid-row:span 2;padding-top:3px}.pflow b{margin:0;font-size:17px}.pflow span{margin-top:2px}
+  .askg{grid-template-columns:1fr;gap:28px}
+  .ask-list li{grid-template-columns:36px 1fr;row-gap:2px}
+  .ask-list span{grid-column:2}
+  .ask-r{padding:24px}
+}
+/* 구역 맞춤 스크롤은 첫 화면에서만 (다른 페이지는 처음 열 때 꼬리말로 튀는 문제) */
+html:not(.fp){scroll-snap-type:none!important}
