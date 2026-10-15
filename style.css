@@ -527,3 +527,83 @@ footer{background:#6b6b6b}
   .tel{font-size:16px}
   .pstick{top:64px}
 }
+
+/* ════════ 하단: 사진 띠 + 바로가기 + 꼬리말 ════════ */
+.cta{position:relative;overflow:hidden;background:#1d241a;color:#fff;padding:120px 0 0}
+.cta-bg{position:absolute;inset:0}
+.cta-bg img{width:100%;height:100%;object-fit:cover;filter:grayscale(.35) contrast(1.05)}
+.cta-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(29,36,26,.72),rgba(29,36,26,.88) 70%),linear-gradient(90deg,rgba(77,94,60,.35),rgba(77,94,60,0))}
+.cta .wrap{position:relative}
+.cta-top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.cta h2{color:#fff;font-size:var(--f-1);line-height:1.35;margin:0}
+.cta-top p{margin-top:16px;color:#d6d8c8;font-size:var(--f-4)}
+.cta-tel{text-align:right}
+.cta-tel a{display:block;color:#d6d8c8;font-size:var(--f-5)}
+.cta-tel a.n{color:#fff;font-size:clamp(34px,3.4vw,52px);font-weight:700;letter-spacing:-.01em;line-height:1.1;margin-bottom:6px}
+.cta-links{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border-top:1px solid rgba(255,255,255,.35)}
+.cta-links a{display:block;padding:32px 28px 64px;border-left:1px solid rgba(255,255,255,.18);color:#fff;transition:background .3s}
+.cta-links a:first-child{border-left:0;padding-left:0}
+.cta-links a:hover{background:rgba(255,255,255,.07)}
+.cta-links a:first-child:hover{background:none}
+.cta-links b{display:flex;justify-content:space-between;align-items:center;font-size:var(--f-2);font-weight:600}
+.cta-links b .ico{width:22px;height:22px;opacity:.7;transition:transform .3s,opacity .3s}
+.cta-links a:hover b .ico{transform:translate(3px,-3px);opacity:1}
+.cta-links span{display:block;margin-top:10px;font-size:var(--f-5);color:#c9ccb6}
+.ft{background:#1d241a;color:#a7ab98;padding:40px 0 48px;font-size:13px;border-top:1px solid rgba(255,255,255,.08)}
+.ft .wrap{display:block}
+.ft-top{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.1)}
+.ft-top img{height:30px;filter:brightness(0) invert(1);opacity:.85}
+.ft-top nav{display:flex;gap:28px;flex-wrap:wrap}
+.ft-top nav a{color:#d6d8c8;font-size:14px}
+.ft-top nav a:hover{color:#fff}
+.ft-info{margin-top:22px;line-height:2}
+.ft-info span+span::before{content:"";display:inline-block;width:1px;height:10px;background:rgba(255,255,255,.2);margin:0 12px;vertical-align:middle}
+.ft-info br+span::before{display:none}
+.ft-c{margin-top:14px;color:#7d8172}
+@media(max-width:900px){
+  .cta{padding:72px 0 0}
+  .cta-tel{text-align:left}
+  .cta-links{grid-template-columns:1fr 1fr;margin-top:48px}
+  .cta-links a{padding:22px 16px 28px}
+  .cta-links a:nth-child(odd){border-left:0;padding-left:0}
+  .cta-links a:nth-child(n+3){border-top:1px solid rgba(255,255,255,.18)}
+  .cta-links b{font-size:17px}
+  .cta-links span{font-size:12.5px}
+  .ft-top nav{gap:16px}
+  .ft-info span{display:block}
+  .ft-info span::before{display:none!important}
+  .ft-info br{display:none}
+}
+
+/* 하단 안: 회사 소개 + 진행 방식 */
+.cta-facts{margin-top:28px;display:grid;grid-template-columns:auto 1fr;gap:8px 20px;font-size:var(--f-4)}
+.cta-facts div{display:contents}
+.cta-facts dt{color:#a9ad97}
+.cta-facts dd{color:#fff;margin:0}
+.cta-flow{margin-top:64px}
+.cta-ft{font-size:var(--f-3);font-weight:700;color:#fff;margin-bottom:18px}
+.cta-ft span{font-weight:400;font-size:var(--f-5);color:#c9ccb6;margin-left:12px}
+.cf{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(255,255,255,.35)}
+.cf div{padding:28px 24px 56px;border-left:1px solid rgba(255,255,255,.18)}
+.cf div:first-child{border-left:0;padding-left:0}
+.cf i{font-style:normal;font-weight:700;font-size:var(--f-5);color:#b8b98c;letter-spacing:.04em}
+.cf b{display:block;margin-top:8px;font-size:var(--f-2);font-weight:600;color:#fff}
+.cf span{display:block;margin-top:8px;font-size:var(--f-5);color:#c9ccb6}
+@media(max-width:900px){
+  .cta-facts{font-size:14px;gap:6px 14px}
+  .cta-flow{margin-top:40px}
+  .cta-ft span{display:block;margin:6px 0 0}
+  .cf{grid-template-columns:1fr}
+  .cf div{display:grid;grid-template-columns:36px 1fr;column-gap:8px;padding:16px 0;border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+  .cf div:first-child{border-top:0}
+  .cf i{grid-row:span 2;padding-top:3px}
+  .cf b{margin:0;font-size:17px}
+  .cf span{margin-top:2px;font-size:13px}
+  .cf div:last-child{padding-bottom:40px}
+}
+
+/* 고정 줄: 접힐 때 아래 내용이 안 밀리게 (바깥 여백은 고정 줄 자신에게) */
+.pstick{margin-top:48px}
+.pstick .ptab{margin-top:0}
+@media(max-width:900px){.pstick{margin-top:24px}.pstick .ptab{margin-top:0}}
+html,body{overflow-anchor:none}
